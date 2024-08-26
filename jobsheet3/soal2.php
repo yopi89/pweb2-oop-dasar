@@ -38,6 +38,6 @@ class Teacher extends Person{
 $student1 = new Student('Yovi', '132');
 echo $student1->getNama();
 $teacher1 = new Teacher('Bu Vika', '321');
-echo $teacher1->getNama();
+echo $teacher1->getNama(); //Menampilkan
 
 ?>
