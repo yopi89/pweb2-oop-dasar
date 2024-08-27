@@ -1,5 +1,5 @@
 <?php
-
+// Membuat class Mahasiswa dan mendeklarasikan properti publik
 class Mahasiswa{
     public $nama;
     public $nim;
@@ -12,12 +12,12 @@ class Mahasiswa{
         $this->jurusan = $jurusan;
     }
     
-    // Metode untuk menampilkan data mahasiswa
+    // Method untuk menampilkan data mahasiswa
     public function tampilkanData(){
         return "Mahasiswa " . $this->nama . ", dengan nim " . $this->nim . " dari jurusan " . $this->jurusan;
     }
     
-    // Metode untuk mengupdate jurusan mahasiswa
+    // Method untuk mengupdate jurusan mahasiswa
     public function updateJurusan($jurusanBaru){
         $this->jurusan = $jurusanBaru;
     }
@@ -29,7 +29,7 @@ $mahasiswa1 = new Mahasiswa("Yovi Tito", "230202024", "JKB");
 // Menampilkan data sebelum jurusan diubah
 echo $mahasiswa1->tampilkanData() . "<br>";
 
-// Mengubah jurusan menggunakan metode updateJurusan
+// Mengubah jurusan menggunakan Method updateJurusan
 $mahasiswa1->updateJurusan("TI");
 
 // Menampilkan data setelah jurusan diubah

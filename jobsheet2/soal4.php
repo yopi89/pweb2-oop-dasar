@@ -1,5 +1,6 @@
 <?php
 
+// Membuat class Mahasiswa dan mendeklarasikan properti publik
 class Mahasiswa{
     public $nama;
     public $nim;
