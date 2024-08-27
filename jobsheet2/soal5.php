@@ -37,6 +37,4 @@ $akses3= new Mahasiswa();
 echo $akses2->aksesFitur();
 echo $akses3->aksesFitur();
 
-
-
 ?>

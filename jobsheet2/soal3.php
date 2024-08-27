@@ -1,37 +1,39 @@
 <?php
-// Membuat class Mahasiswa dan mendeklarasikan properti publik
-class Mahasiswa{
-    public $nama;
-    public $nim;
-    public $jurusan;
+// Membuat class Pengguna sebagai kelas dasar
+class Pengguna{
+    // Properti protected dapat diakses oleh kelas turunan
+    protected $nama;
 
-    // Constructor untuk menginisialisasi atribut nama, nim, dan jurusan
-    public function __construct($nama, $nim, $jurusan){
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
+    // Constructor untuk menginisialisasi properti nama saat objek dibuat
+    public function __construct($nama){
+        $this->nama=$nama;
     }
-    
-    // Method untuk menampilkan data mahasiswa
-    public function tampilkanData(){
-        return "Mahasiswa " . $this->nama . ", dengan nim " . $this->nim . " dari jurusan " . $this->jurusan;
+    // Method untuk mengatur nilai properti nama
+    public function setNama($nama){
+        return $this->nama=$nama;
     }
-    
-    // Method untuk mengupdate jurusan mahasiswa
-    public function updateJurusan($jurusanBaru){
-        $this->jurusan = $jurusanBaru;
+    // Method untuk mendapatkan nilai properti nama
+    public function getNama(){
+        return $this->nama;
     }
 }
+// Membuat class Dosen yang mewarisi class Pengguna
+class Dosen extends Pengguna{
+    // Properti private untuk mata kuliah
+    private $matkul;
 
-// Membuat objek Mahasiswa dengan nilai awal untuk atribut nama, nim, dan jurusan
-$mahasiswa1 = new Mahasiswa("Yovi Tito", "230202024", "JKB");
-
-// Menampilkan data sebelum jurusan diubah
-echo $mahasiswa1->tampilkanData() . "<br>";
-
-// Mengubah jurusan menggunakan Method updateJurusan
-$mahasiswa1->updateJurusan("TI");
-
-// Menampilkan data setelah jurusan diubah
-echo $mahasiswa1->tampilkanData();
+    // Constructor untuk menginisialisasi properti nama dan matkul saat objek Dosen dibuat
+    public function __construct($nama, $matkul){
+        // Memanggil constructor dari class Pengguna
+        parent:: __construct($nama);
+        $this->matkul=$matkul;
+    }
+    // Method untuk menampilkan data dosen
+    public function getDosen(){
+        return "Nama = " . $this->getNama() . "\nMata Kuliah = " . $this->matkul;
+    }
+}
+// Membuat objek Dosen dan menampilkan menggunakan method getDosen
+$dosen1 = new Dosen('Bu Vika',' RPL');
+echo $dosen1->getDosen();
 ?>

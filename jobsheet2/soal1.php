@@ -1,21 +1,29 @@
 <?php
-// Membuat class Mahasiswa dan mendeklarasikan properti publik
+// Membuat class (blueprint) mahasiswa
 class Mahasiswa{
-    public $nama;
-    public $nim;
-    public $jurusan;
+    // Mendeklarasikan properti private nama, nim dan jurusan
+    private $nama;
+    private $nim;
+    private $jurusan;
 
-     // Method untuk menampilkan data mahasiswa
+    // Constructor untuk menginisialisasi properti ketika objek dibuat
+    public function __construct($nama, $nim, $jurusan){
+        // Mengisi properti dengan nilai yang diberikan saat objek dibuat
+        $this->nama = $nama;       
+        $this->nim = $nim;         
+        $this->jurusan = $jurusan; 
+    }
+
+    // Method untuk menampilkan data mahasiswa (nama, nim dan jurusan)
     public function tampilkanData(){
- 
-        return "Mahasiswa ".$this->nama." dengan nim ".$this->nim." dari jurusan ".$this->jurusan;
+        echo "Nama : " .$this->nama. "<br>";
+        echo "NIM : " .$this->nim. "<br>";
+        echo "Jurusan : " .$this->jurusan. "<br>";
     }
 }
-// Membuat objek Mahasiswa dan mengisi properti objek dengan data
-$mahasiswa1 = new Mahasiswa();
-$mahasiswa1->nama='Yovi Tito';
-$mahasiswa1->nim='230202024';
-$mahasiswa1->jurusan='JKB';
-// Menampilkan data mahasiswa menggunakan method tampilkanData
-echo $mahasiswa1->tampilkanData();
+
+// Membuat objek Mahasiswa dan mengisi data
+$mahasiswa1 = new Mahasiswa("Yovi Tito", "230202024", "JKB");
+// Memanggil method untuk menampilkan data mahasiswa
+$mahasiswa1->tampilkanData();
 ?>

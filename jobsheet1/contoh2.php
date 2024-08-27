@@ -1,21 +1,19 @@
 <?php
+// Menambahkan Attribut dan Method
 class Buku{
-    private $judul;
-    private $penuis;
+    public $judul;
+    public $penulis;
 
     public function __construct($judul, $penulis){
         $this->judul=$judul;
         $this->penulis=$penulis;
 
     }
-    public function getJudul(){
-        return $this->judul;
+    public function tampilkanInfo(){
+        return "Buku : $this->judul, ditulis oleh $this->penulis.";
     }
-    public function setJudul($judul){
-        return $this->judul=$judul;
-    }
-    
+
 }
-    $buku1 = New Buku("Pemograman PHP", "Yovi Tito");
-    echo $buku1->getJudul();
+$buku1= new Buku("pemrograman PHP", "JOhn Doe");
+echo $buku1->tampilkanInfo();
 ?>
