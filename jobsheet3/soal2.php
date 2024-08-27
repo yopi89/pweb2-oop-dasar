@@ -5,8 +5,8 @@ class Person{
     protected function getNama(){
         return $this->nama;
     }
-    public function __construct($name){
-        $this->name=$name;
+    public function __construct($nama){
+        $this->nama=$nama;
     }
 
 }
@@ -21,7 +21,7 @@ class Student extends Person{
         return $this->studentID;
     }
     public function getNama(){
-        return "Nama Murid : " .$this->name;
+        return "Nama Murid : " .$this->nama;
     }
 }
 class Teacher extends Person{
@@ -31,7 +31,7 @@ class Teacher extends Person{
         $this->studentID=$studentID;
     }
     public function getNama(){
-        return "Nama Guru : " .$this->name;
+        return "Nama Guru : " .$this->nama;
     }
 }
 
