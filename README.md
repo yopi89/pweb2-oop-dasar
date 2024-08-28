@@ -1,4 +1,4 @@
-﻿﻿# OOP Dasar
+﻿# OOP Dasar
 
 ## Pengertian OOP Dasar
 Objek-Oriented Programming (OOP) adalah paradigma pemrograman yang menggunakan “objek” - struktur data yang berisi data, dalam bentuk field, sering kali dikenal sebagai atribut; dan kode, dalam bentuk prosedur, sering kali dikenal sebagai metode.
