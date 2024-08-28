@@ -1,4 +1,5 @@
 <?php
+// Kelas Abstrak tidak dapat dipakai secara langsunag tapi harus di wariskan untuk penggunaannya
 // Membuat kelas abstrak Pengguna
 abstract class Pengguna{
     // Properti protected agar dapat diakses oleh kelas turunan
