@@ -45,6 +45,7 @@ class Mahasiswa extends Person {
         $this->nim = $nim;
     }
 
+
     public function getNim() {
         return $this->nim;
     }
