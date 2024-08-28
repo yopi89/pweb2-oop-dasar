@@ -5,7 +5,7 @@ Objek-Oriented Programming (OOP) adalah paradigma pemrograman yang menggunakan â
 
 Inti dari OOP adalah mendesain software dengan membagi masalah menjadi serangkaian objek yang saling berinteraksi. Ini bertentangan dengan pemrograman prosedural, yang fokus pada fungsi/prosedur dalam memproses data.
 
-#### Class
+### Class
 ```php
 class Buku{
 
@@ -13,13 +13,13 @@ class Buku{
 ```
 Class adalah template atau blueprint yang mendefinisikan struktur dan perilaku dari objek. Class mencakup attribut dan metode yang dapat dimiliki.
 
-#### Objek
+### Objek
 ```php
 $buku1 = New Buku
 ```
 Object mewarisi semua atribut dan metode dari class dan dapat digunakan untuk memanipulasi data atau menjalankan fungsi tertentu.
 
-#### Attribut
+### Attribut
 ```php
 class Buku{
     protected $nama;
@@ -32,7 +32,7 @@ Atribut adalah variabel yang terdapat di class yang digunakan untuk menyimpan da
 
 Jenis-jenis atribut terbagi menjadi public, protected dan private. Public dapat diakses dimana saja. Protected dapat diakses dari dalam class itu sendiri dan dari dalam class turunannya. Sedangkan Private hanya dapat diakses dari dalam class itu sendiri.
 
-#### Method
+### Method
 ```php
 public function tampilInfo(){
         return "Judul: $this->judul, Penulis: $this->penulis";
