@@ -1,5 +1,5 @@
 ﻿# OOP Dasar
-
+Repositori ini dibuat untuk memenuhi tugas perkuliahan Praktikum Web 2 yang berisi JobSheet 1 hingga Jobsheet 3.
 ## Pengertian OOP Dasar
 Objek-Oriented Programming (OOP) adalah paradigma pemrograman yang menggunakan “objek” - struktur data yang berisi data, dalam bentuk field, sering kali dikenal sebagai atribut; dan kode, dalam bentuk prosedur, sering kali dikenal sebagai metode.
 
@@ -53,7 +53,7 @@ public function tampilInfo(){
 ```
 Metode adalah fungsi yang digunakan untuk melakukan tindakan pada objek.
 
-## Full Codingan
+## Full Coding Jobsheet 1
 #### 1. Membuat Class dan Object
 ```php
 <?php
@@ -256,7 +256,7 @@ Bu Vika dengan NIP 123 mengajar Mata Kuliah RPL
 
 ```
 
-## Jobsheet 2
+## Jobsheet 2 dan 3
 ### Encapsulation
 ```php
 class Animal{
@@ -327,7 +327,7 @@ class Dog extends Animal{
 ```
 Abstraksi adalah konsep untuk menyederhanakan representasi dari objek dengan hanya menampilkan atribut dan metode yang relevan dan menyembunyikan detail yang tidak perlu. Abstraksi dilakukan dengan menggunakan kelas abstrak, yang mendefinisikan metode umum tanpa memberikan implementasi konkret.
 
-## Full Coding
+## Full Coding Jobsheet 2
 #### 1. Membuat Class dan Object
 ```php
 <?php
@@ -581,79 +581,7 @@ Lihat Nilai
 
 ```
 
-## Jobsheet 3
-### Encapsulation
-```php
-class Animal{
-    protected $name;
-
-  public function getName(){
-        return $this->name;
-    }
-}
-```
-Encapsulation adalah konsep pengamanan data di dalam objek dengan membatasi akses ke atribut dan metode menggunakan visibility sehingga data hanya dapat dimanipulasi melalui metode tertentu.
-
-### Inheritance (Pewarisan)
-```php
-class Animal{
-    ...
-}
-
-class Cat extends Animal{
-    ...
-}
-
-class Dog extends Animal{
-    ...
-}
-```
-Pewarisan adalah mekanisme di mana sebuah kelas baru dapat mewarisi sifat-sifat (atribut dan metode) dari kelas yang sudah ada. Kelas yang diwarisi disebut superclass atau parent class, sedangkan kelas yang mewarisi disebut subclass atau child class. Ini memungkinkan pengembangan kode yang lebih efisien karena subclass dapat menggunakan kembali kode dari superclass.
-
-### Polymorphism
-```php
-class Animal{
-    public function sound(){
-        return "sound of animal";
-    }
-}
-
-class Cat extends Animal{
-    public function sound(){
-        return "Meow";
-    }
-}
-
-class Dog extends Animal{
-    public function sound(){
-        return "Woof";
-    }
-}
-```
-Polimorfisme memungkinkan objek dari berbagai kelas untuk diperlakukan sebagai objek dari kelas yang sama melalui antarmuka yang sama. Ini bisa dilakukan melalui overloading (metode yang sama dengan parameter berbeda) atau overriding (mengubah perilaku metode dari superclass di subclass).
-
-### Abstraction
-```php
-abstract class Animal{
-    abstract public function sound();
-}
-
-class Cat extends Animal{
-    public function sound(){
-        return "Meow";
-    }
-}
-
-class Dog extends Animal{
-    public function sound(){
-        return "Woof";
-    }
-}
-```
-Abstraksi adalah konsep untuk menyederhanakan representasi dari objek dengan hanya menampilkan atribut dan metode yang relevan dan menyembunyikan detail yang tidak perlu. Abstraksi dilakukan dengan menggunakan kelas abstrak, yang mendefinisikan metode umum tanpa memberikan implementasi konkret.
-
-
-## Full Coding
+## Full Coding Jobsheet 3
 #### 1. Inheritance
 ```php
 <?php
